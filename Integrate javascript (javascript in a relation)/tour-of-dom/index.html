@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of Dom</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="welcome"> Welcome To DOM</h1>
+    </header>
+
+    <main>
+      <h1> Awesome Dom </h1>
+      <ul>
+        <li class="important-places">Bangladesh</li>
+        <li class="important-places">Argentina</li>
+        <li id="barca">Barcelona</li>
+      </ul>
+    </main>
+</body>
+<!-- Link js file 1st method -->
+<script src="js/dom.js"></script>
+<!-- Second Method -->
+<script>
+    console.log('Adding JS File to HTML')
+</script>
+
+<script>
+
+  //  Option 1 - getElementsByTagName
+
+  const liCollectiom = document.getElementsByTagName('li');
+  // console.log(liCollectiom);
+  for (const li of liCollectiom) {
+    console.log(li.innerText);
+  }
+
+  const allHeadings = document.getElementsByTagName('h1');
+  for ( const h1 of allHeadings){
+    console.log(h1.innerText);
+  }
+
+   //  Option 2 - getElementsByClassName
+
+  const places = document.getElementsByClassName('important-places');
+  for (const place of places) {
+    console.log(place.innerText);
+  }
+
+   //  Option 3 - getElementById
+
+  const barca = document.getElementById('barca');
+  for (const barca of barca) {
+    console.log(barca);
+  }
+
+   //  Option 4 - querySelector
+
+    //  Option 5 - querySelectorAll
+
+  const li = document.querySelectorAll('.important-places li');
+  for (const li of li) {
+    console.log(li);
+  }
+</script>
+</html>
